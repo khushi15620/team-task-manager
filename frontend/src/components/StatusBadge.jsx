@@ -1,13 +1,13 @@
 const map = {
-  todo: 'bg-slate-100 text-slate-700',
-  in_progress: 'bg-amber-100 text-amber-700',
-  completed: 'bg-emerald-100 text-emerald-700',
+  todo: 'bg-slate-500/15 text-slate-200 border-slate-400/20',
+  in_progress: 'bg-amber-500/15 text-amber-200 border-amber-400/30',
+  completed: 'bg-emerald-500/15 text-emerald-200 border-emerald-400/30',
 };
 const label = { todo: 'Todo', in_progress: 'In Progress', completed: 'Completed' };
 
 export default function StatusBadge({ status }) {
   return (
-    <span className={`px-2 py-1 rounded-full text-xs font-medium ${map[status]}`}>
+    <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium border ${map[status]}`}>
       {label[status]}
     </span>
   );
